@@ -4,20 +4,24 @@
 using namespace std;
 int main()
 {
-	int i,n;
+	int i,n,k;
 	cout<<"enter n";
 	cin>>n;
 	int a[n];
 	cout<<"enter array elements \n";
 	for(i=0;i<n;i++)
 		cin>>a[i];
-	int l;
-	l=a[0];
-	for(i=1;i<n;i++)
+	cout<<"enter key element\n";
+	cin>>k;
+	int t=-1;
+	for(int x:a)
 	{
-		if(l<a[i])
-			l=a[i];
-		
+		if(x==k)
+		{
+			t=1;
+			break;
+		}
 	}
-	cout<<"largest element: "<<l<<endl;
+	cout<<t<<endl;
+	
 }
