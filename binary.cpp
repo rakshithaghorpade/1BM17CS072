@@ -6,19 +6,28 @@ int binary(int n)
 {
 	int f=0;
 	int l=n;
+	int an;
 	while(f<=l)
 	{
 		int m=((f+l)/2);
-		if(n==m*m)
+		if(m*m==n)
 		{
 			return m;
-			break;
+			
 		}
-		else if(n<m*m)
-			l=m-1;
+		else if((m*m)< n)
+		{
+			f=m+1;
+			an=m;
+		}
 		else
-		f=m+1;
-	}
+		{
+			l=m-1;
+			
+		}
+		
+}
+return an;
 }
 
 int main()
